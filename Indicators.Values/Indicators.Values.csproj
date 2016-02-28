@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F19549EB-8F8F-4F46-8561-F1E5692783FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SteveBagnall.Trading.Indicators.Values</RootNamespace>
+    <AssemblyName>SteveBagnall.Trading.Indicators.Values</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADX.cs" />
+    <Compile Include="AggregatedLines\AggregateLines.cs" />
+    <Compile Include="AggregatedLines\PriceLevel.cs" />
+    <Compile Include="AggregatedLines\TrendLine.cs" />
+    <Compile Include="ATR.cs" />
+    <Compile Include="BarrierPrototypeBase.cs" />
+    <Compile Include="CCI.cs" />
+    <Compile Include="Chop.cs" />
+    <Compile Include="Complexity.cs" />
+    <Compile Include="CTI.cs" />
+    <Compile Include="Divergence.cs" />
+    <Compile Include="DoubleZeros.cs" />
+    <Compile Include="EMAPair.cs" />
+    <Compile Include="KeltnerChannel.cs" />
+    <Compile Include="MamaFama.cs" />
+    <Compile Include="MESA.cs" />
+    <Compile Include="MomentumAbsolute.cs" />
+    <Compile Include="MomentumRelative.cs" />
+    <Compile Include="PFE.cs" />
+    <Compile Include="PriceRangeBarrierPropertiesBase.cs" />
+    <Compile Include="PriceRangeBarrierProperty.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RSI.cs" />
+    <Compile Include="SMAPair.cs" />
+    <Compile Include="StandardDeviation.cs" />
+    <Compile Include="Stochastic.cs" />
+    <Compile Include="Trends.cs" />
+    <Compile Include="TrueRange.cs" />
+    <Compile Include="Volatility.cs" />
+    <Compile Include="VolatilityChannel.cs" />
+    <Compile Include="VPFEChannel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Indicators.Values.Contracts\Indicators.Values.Contracts.csproj">
+      <Project>{41acb6ed-9ef1-4dd6-88f3-f8e4467fce6b}</Project>
+      <Name>Indicators.Values.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Indicators.Values.Shared\Indicators.Values.Shared.csproj">
+      <Project>{7ab9f473-f17f-45bc-9af4-823695a2e8dd}</Project>
+      <Name>Indicators.Values.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{670ad73b-553e-4437-b54c-0a91d8c0348f}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

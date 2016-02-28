@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16EC6155-6AE5-488D-A0AD-E336A94596B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Indicators.Simple</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADXBase.cs" />
+    <Compile Include="ADXExponential.cs" />
+    <Compile Include="ADXExponentialRelative.cs" />
+    <Compile Include="ADXSimple.cs" />
+    <Compile Include="ADXSimpleRelative.cs" />
+    <Compile Include="AggregateLinesBarrierIndicatorBase.cs" />
+    <Compile Include="ATR.cs" />
+    <Compile Include="BarrierStudyPair\BarrierEventObject.cs" />
+    <Compile Include="BarrierStudyPair\BarrierHistories.cs" />
+    <Compile Include="BarrierStudyPair\BarrierHistory.cs" />
+    <Compile Include="BarrierStudyPair\EventPatternKey.cs" />
+    <Compile Include="BarrierStudyPair\EventType.cs" />
+    <Compile Include="CCI.cs" />
+    <Compile Include="Choppiness.cs" />
+    <Compile Include="Corona.cs" />
+    <Compile Include="CTI.cs" />
+    <Compile Include="Divergence.cs" />
+    <Compile Include="DoubleZeros.cs" />
+    <Compile Include="EMAPair.cs" />
+    <Compile Include="FractalComplexity.cs" />
+    <Compile Include="IndicatorMethods.cs" />
+    <Compile Include="KeltnerChannel.cs" />
+    <Compile Include="MamaFama.cs" />
+    <Compile Include="MESA.cs" />
+    <Compile Include="MomentumAbsolute.cs" />
+    <Compile Include="MomentumRelative.cs" />
+    <Compile Include="PFE.cs" />
+    <Compile Include="PriceRangeBarrierIndicatorBase.cs" />
+    <Compile Include="RSI.cs" />
+    <Compile Include="SMAPair.cs" />
+    <Compile Include="StandardDeviation.cs" />
+    <Compile Include="StochasticBase.cs" />
+    <Compile Include="StochasticFast.cs" />
+    <Compile Include="StochasticSlow.cs" />
+    <Compile Include="ToR.cs" />
+    <Compile Include="Trends.cs" />
+    <Compile Include="TrueRange.cs" />
+    <Compile Include="Volatility.cs" />
+    <Compile Include="VolitilityChannel.cs" />
+    <Compile Include="VPFEChannel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Indicators.Contracts\Indicators.Contracts.csproj">
+      <Project>{22c491b8-e115-436f-b74b-d88a10e63e28}</Project>
+      <Name>Indicators.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Indicators.Shared\Indicators.Shared.csproj">
+      <Project>{64693ce7-f4f8-4bb0-b905-466cd982b489}</Project>
+      <Name>Indicators.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Indicators.Values.Contracts\Indicators.Values.Contracts.csproj">
+      <Project>{41acb6ed-9ef1-4dd6-88f3-f8e4467fce6b}</Project>
+      <Name>Indicators.Values.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Indicators.Values.Shared\Indicators.Values.Shared.csproj">
+      <Project>{7ab9f473-f17f-45bc-9af4-823695a2e8dd}</Project>
+      <Name>Indicators.Values.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Indicators.Values\Indicators.Values.csproj">
+      <Project>{f19549eb-8f8f-4f46-8561-f1e5692783fc}</Project>
+      <Name>Indicators.Values</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{670ad73b-553e-4437-b54c-0a91d8c0348f}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
